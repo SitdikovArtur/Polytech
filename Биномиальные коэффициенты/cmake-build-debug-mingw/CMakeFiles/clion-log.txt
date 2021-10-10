@@ -1,0 +1,21 @@
+"C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" "C:\Users\Artur\CLionProjects\Биномиальные коэффициенты"
+CMake Error: Could not find cmake module file: CMakeDetermineРєРѕСЌС„С„РёС†РёРµРЅС‚С‹Compiler.cmake
+CMake Error: Error required internal CMake variable not set, cmake may not be built correctly.
+Missing variable is:
+CMAKE_РєРѕСЌС„С„РёС†РёРµРЅС‚С‹_COMPILER_ENV_VAR
+CMake Error: Error required internal CMake variable not set, cmake may not be built correctly.
+Missing variable is:
+CMAKE_РєРѕСЌС„С„РёС†РёРµРЅС‚С‹_COMPILER
+CMake Error: Could not find cmake module file: C:/Users/Artur/CLionProjects/Р‘РёРЅРѕРјРёР°Р»СЊРЅС‹Рµ РєРѕСЌС„С„РёС†РёРµРЅС‚С‹/cmake-build-debug-mingw/CMakeFiles/3.20.2/CMakeРєРѕСЌС„С„РёС†РёРµРЅС‚С‹Compiler.cmake
+CMake Error at CMakeLists.txt:2 (project):
+  No CMAKE_РєРѕСЌС„С„РёС†РёРµРЅС‚С‹_COMPILER could be found.
+
+  Tell CMake where to find the compiler by setting the CMake cache entry
+  CMAKE_РєРѕСЌС„С„РёС†РёРµРЅС‚С‹_COMPILER to the full path to the compiler,
+  or to the compiler name if it is in the PATH.
+
+
+CMake Error: Could not find cmake module file: CMakeРєРѕСЌС„С„РёС†РёРµРЅС‚С‹Information.cmake
+CMake Error: CMAKE_РєРѕСЌС„С„РёС†РёРµРЅС‚С‹_COMPILER not set, after EnableLanguage
+-- Configuring incomplete, errors occurred!
+See also "C:/Users/Artur/CLionProjects/Р‘РёРЅРѕРјРёР°Р»СЊРЅС‹Рµ РєРѕСЌС„С„РёС†РёРµРЅС‚С‹/cmake-build-debug-mingw/CMakeFiles/CMakeOutput.log".

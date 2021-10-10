@@ -1,0 +1,3 @@
+C:/Users/Artur/CLionProjects/Биномиальные коэффициенты/cmake-build-debug-mingw/CMakeFiles/edit_cache.dir
+C:/Users/Artur/CLionProjects/Биномиальные коэффициенты/cmake-build-debug-mingw/CMakeFiles/untitled.dir
+C:/Users/Artur/CLionProjects/Биномиальные коэффициенты/cmake-build-debug-mingw/CMakeFiles/rebuild_cache.dir
