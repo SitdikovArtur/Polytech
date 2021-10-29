@@ -1,3 +1,0 @@
-C:/Users/Artur/CLionProjects/untitled/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Artur/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir
-C:/Users/Artur/CLionProjects/untitled/cmake-build-debug/CMakeFiles/rebuild_cache.dir
