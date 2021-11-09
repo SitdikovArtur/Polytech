@@ -59,9 +59,9 @@ int main() {
     }else if(flag[0] || flag[1]){
         if(flag[0]){
             cout << "Leftmost: " << left[0] << " " << left[1] << endl;
-            cout << "There are not points on the right side" << endl;
+            cout << "Rightmost: " << 0 << 0 << endl;
         }else{
-            cout << "There are not points on the left side" << endl;
+            cout << "Leftmost: " << 0 << 0 << endl;
             cout << "Rightmost: " << right[0] << " " << right[1] << endl;
         }
     }else{
