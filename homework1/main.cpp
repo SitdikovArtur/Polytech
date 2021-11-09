@@ -65,7 +65,8 @@ int main() {
             cout << "Rightmost: " << right[0] << " " << right[1] << endl;
         }
     }else{
-        cout << "There are not points to compare" << endl;
+        cout << "Leftmost: " << 0 << " " << 0 << endl;
+        cout << "Rightmost: " << 0 << " " << 0 << endl;
     }
 
     return 0;
