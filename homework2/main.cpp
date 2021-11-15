@@ -57,14 +57,6 @@ int main(int argc, char* argv[]) {
         n = n + 1;
     }
 
-//    for(int j = 0; j < i - 1; j++){
-//        cout << arr[j] << " ";
-//    }
-
-//    for(int j = 0; j < (i - 4) / 2; j++){
-//        cout << arr_x[j] << " " << arr_h[j] << endl;
-//    }
-
     double x_0 = 0;
     double y;
 
@@ -73,7 +65,6 @@ int main(int argc, char* argv[]) {
     bool flag = false;
     while(k < ((i - 4) / 2)){
         y = trajectory(x_0, arr_x[k], v_x, v_y, h0);
-        cout << y << endl;
         if(y > 0 && y < arr_h[k]){
             v_x = (-1) * v_x;
             x_0 = arr_x[k] - x_0;
@@ -114,8 +105,6 @@ int main(int argc, char* argv[]) {
             res_x = result[1];
         }
     }
-
-    cout << res_x << endl;
 
     if(res_x > arr_x[(i - 4) / 2 - 1]){
         cout << (i - 4) / 2 - 1;
