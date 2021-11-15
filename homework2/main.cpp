@@ -66,7 +66,7 @@ int main(int argc, char* argv[]) {
     while(k < ((i - 3) / 2) && k >= 0){
         y = trajectory(x_0, arr_x[k], v_x, v_y, h0);
         cout << y << endl;
-        if(y > 0 && y < arr_h[k]){
+        if(y > 0 && y <= arr_h[k]){
             v_x = (-1) * v_x;
             x_0 = arr_x[k] - x_0;
             if(v_x > 0){
