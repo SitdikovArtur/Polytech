@@ -43,6 +43,12 @@ int main(int argc, char* argv[]) {
     h0 = arr[0];
     v_x = arr[1];
     v_y = arr[2];
+    
+    if(v_x == 0 || v_y == 0){
+        cout << 0;
+        return 0;
+    }
+
     int arr_x[(i - 3) / 2];
     int arr_h[(i - 3) / 2];
 
