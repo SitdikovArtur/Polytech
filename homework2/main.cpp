@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <cmath>
+#include <vector>
+#include <typeinfo>
 
 using namespace std;
 
@@ -27,61 +29,41 @@ int main(int argc, char* argv[]) {
     }
 
     ifstream file(argv[1]);
-    int h0, v_x, v_y, i = 0;
-    int* arr = new int[100];
+    int h0, v_x, v_y, x, h, i = 0, k = 0;
+    vector <pair <int, int> > arr;
+
+    file >> h0 >> v_x >> v_y;
 
     if(file.is_open()){
         while(!file.eof()) {
-            int tmp;
-            file >> tmp;
-            arr[i] = tmp;
-            i = i + 1;
+            file >> x >> h;
+            arr.emplace_back(x, h);
+            i++;
         }
     }
     file.close();
 
-    h0 = arr[0];
-    v_x = arr[1];
-    v_y = arr[2];
-    
+    i = i - 1;
+
     if(v_x == 0 || v_y == 0){
         cout << 0;
         return 0;
     }
 
-    int arr_x[(i - 3) / 2];
-    int arr_h[(i - 3) / 2];
-
-    int k = 0;
-    int n = 0;
-    for(int j = 3; j < (i - 1); j = j + 2){
-        arr_x[k] = arr[j];
-        k = k + 1;
-    }
-    for(int j = 4; j <= (i - 1); j = j + 2){
-        arr_h[n] = arr[j];
-        n = n + 1;
-    }
-
-    double x_0 = 0;
-    double y;
-
-    double res_x = 0;
-    k = 0;
+    double y, x_0 = 0, res_x = 0;;
     bool flag = false;
-    while(k < ((i - 3) / 2) && k >= 0){
-        y = trajectory(x_0, arr_x[k], v_x, v_y, h0);
-        cout << y << endl;
-        if(y > 0 && y <= arr_h[k]){
+    while(k <= i && k >= 0){
+        y = trajectory(x_0, arr[k].first, v_x, v_y, h0);
+        if(y > 0 && y <= arr[k].second){
             v_x = (-1) * v_x;
-            x_0 = arr_x[k] - x_0;
+            x_0 = arr[k].first - x_0;
             if(v_x > 0){
                 k = k + 1;
             }else {
                 k = k - 1;
             }
             flag = true;
-        }else if(y > 0 && y > arr_h[k]){
+        }else if(y > 0 && y > arr[k].second){
             if(v_x > 0){
                 k = k + 1;
             }else {
@@ -108,7 +90,7 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    if(k == ((i - 3) / 2)) {
+    if(k == i) {
         double *result = end(x_0, v_y, v_x, h0);
         if(v_x < 0){
             res_x = result[0];
@@ -124,17 +106,16 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    if(res_x > arr_x[(i - 3) / 2]){
-        cout << (i - 3) / 2;
+    if(res_x > arr[i].first){
+        cout << i;
     }else{
-        for(int j = 0; j <= (i - 3) / 2; j++){
-            if(res_x < arr_x[j]){
+        for(int j = 0; j <= i; j++){
+            if(res_x < arr[j].first){
                 cout << j;
                 break;
             }
         }
     }
 
-    delete[] arr;
     return 0;
 }
