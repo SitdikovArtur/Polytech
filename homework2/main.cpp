@@ -118,8 +118,6 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    cout << res_x << endl;
-
     if(res_x > arr_x[(i - 3) / 2]){
         cout << (i - 3) / 2;
     }else{
