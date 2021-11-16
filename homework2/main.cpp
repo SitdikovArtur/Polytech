@@ -35,14 +35,18 @@ int main(int argc, char* argv[]) {
     file.close();
 
     if(i == 0){
-        cout << (2 * v_x * v_y) / 9.81;
+        cout << 0;
         return 0;
     }
 
-    i = i - 1;
     double t = (v_y + sqrt(v_y * v_y + 2 * 9.81 * h0)) / 9.81;
     double temp, time = 0, x_0 = 0;
     int result = 0;
+
+    if(arr[0].first / v_x >= t){
+        cout << 0;
+        return 0;
+    }
 
     while(result >= 0){
         temp = (arr[result].first - x_0) / v_x;
@@ -73,7 +77,6 @@ int main(int argc, char* argv[]) {
             }
         }
     }
-
     cout << 0;
 
     return 0;
