@@ -18,7 +18,7 @@ int main() {
                     file >> y;
                     vec_multi = x_n * y - y_n * x;
                     length = vec_multi / l_n;
-                    if (vec_multi < 0) {
+                    if (vec_multi <= 0) {
                         flag2 = true;
                         length = (-1) * length;
                         if (length_right <= length) {
