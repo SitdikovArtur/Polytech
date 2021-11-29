@@ -20,11 +20,6 @@ int main(int argc, char* argv[]) {
 
     file >> h0 >> v_x >> v_y;
 
-    if(v_x == 0 || v_y == 0){
-        cout << 0;
-        return 0;
-    }
-
     if(file.is_open()){
         while(!file.eof()) {
             file >> x >> h;
@@ -78,6 +73,5 @@ int main(int argc, char* argv[]) {
         }
     }
     cout << 0;
-
     return 0;
 }
