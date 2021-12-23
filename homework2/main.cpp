@@ -44,6 +44,10 @@ int main(int argc, char* argv[]) {
     }
 
     while(result >= 0){
+        if(result == i){
+            cout << result;
+            return 0;
+        }
         temp = (arr[result].first - x_0) / v_x;
         time = time + temp;
         x_0 = arr[result].first;
