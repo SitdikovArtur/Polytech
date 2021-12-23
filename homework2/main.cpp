@@ -23,9 +23,13 @@ int main(int argc, char* argv[]) {
     if(file.is_open()){
         while(!file.eof()) {
             file >> x >> h;
-            arr.emplace_back(x, h);
-            i++;
+            if (x != double(NULL)){
+                arr.emplace_back(x, h);
+                i++;
+            }
         }
+    }else{
+        cout << "File isn`t found";
     }
     file.close();
 
@@ -53,7 +57,7 @@ int main(int argc, char* argv[]) {
         x_0 = arr[result].first;
         if(time >= t){
             if(v_x > 0){
-                cout << result - 1;
+                cout << result;
                 return 0;
             }else{
                 cout << result + 1;
